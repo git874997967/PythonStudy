@@ -27,8 +27,6 @@ result = f'message = {message}, message2 = {message2}'
 #print(result)
 # practise use 4 methods to output  welcome xxx 光临 where xxx is your name 
 #method 0 
-
-
 string = 'welcome'
 name = ' sophia huang'
 end = ' 光临'
@@ -42,3 +40,36 @@ print(string2)
 #method3 
 string3 = f'{string}{name}{end}'
 print(string3 * 2)
+# 类型检查 
+a = 123
+b = '123'
+print(f'{a}{b}')
+
+def is_number(s):
+    #print(s.isdigit()," this is from isnumeric method")
+    try:
+        float(s)
+        return True
+    except ValueError :
+        pass
+    try :
+        import unicodedata
+        unicodedata.numeric(s)
+        return True
+    except (TypeError,ValueError):
+        pass
+    return False
+
+print(is_number(a))
+print(is_number(b))
+print(is_number("abc"))
+print(id(a), type(a), a)
+#类型转换  将一个类型的对象转换为另一个
+a = 'hello' 
+b = '123'
+c = 123
+print(int(b) + c)
+
+# 类型转换  函数  int()  float() bool()  str()  
+
+print(bool(a), bool(b),bool(0))
