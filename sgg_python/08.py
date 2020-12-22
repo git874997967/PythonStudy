@@ -19,3 +19,15 @@ def sum2(*a,b,c):
     print("c = ", c)
 sum2(1,2,3,b=(4,5),c= 6)
 # **a  将所有 参数保存到字典中 
+# 参数的解包
+# *对元组解包  ** 对字典解包 
+def fun1(a:int, b:str,c:bool):
+     """
+     this is a doc of the function 
+     
+     
+     """
+     print(210)
+help(fun1)
+
+ 
