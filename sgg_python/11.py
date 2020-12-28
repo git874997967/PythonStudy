@@ -65,9 +65,9 @@ class  Animal:
 class Cat(Animal):
     def __init__(self, name ,age):
         #  直接用 supe  返回 
-        super().__init__(name)
-        # self._name = name
-        self._age = age
+        #super().__init__(name)
+         self._name = name
+         self._age = age
     def run(self):
         print(f" cat {self._name} is running")
         pass
@@ -86,3 +86,17 @@ c.name = "sophia"
 c.age = 10
 c.run()
 c.bark()
+
+class A(object):
+    def test(self):
+        print("from A")
+ >       pass
+class B(object):
+    def test2(self):
+        print("from B")
+        pass
+class C(A,B):
+    pass
+c = C()
+c.test()
+c.test2()
