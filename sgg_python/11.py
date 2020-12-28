@@ -90,7 +90,7 @@ c.bark()
 class A(object):
     def test(self):
         print("from A")
- >       pass
+        pass
 class B(object):
     def test2(self):
         print("from B")
