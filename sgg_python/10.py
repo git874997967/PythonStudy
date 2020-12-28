@@ -64,3 +64,17 @@ def pows(a,b):
     return a ** b
 
 print( pows(3,5))
+
+
+def wraper(function_name):
+    def new_function(*args,**kargs):
+        print("before call....")
+        function_name(*args,**kargs)
+        print("after call.....")
+        return function_name
+    return new_function
+@wraper
+def simple_print(name):
+    print(f"hello {name}")
+
+simple_print("zhenming")
